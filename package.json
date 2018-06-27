@@ -1,0 +1,22 @@
+{
+  "name": "item",
+  "version": "1.0.0",
+  "description": "this is a webpack item",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config build/webpack.config.js --mode production ",
+    "dev": "webpack-dev-server --mode development --env.development --config build/webpack.config.js --hot --devtool source-map"
+  },
+  "author": "fungquanChan",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.12.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "devDependencies": {
+    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+  }
+}
