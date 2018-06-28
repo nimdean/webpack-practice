@@ -5,18 +5,24 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config build/webpack.config.js --mode production ",
-    "dev": "webpack-dev-server --mode development --env.development --config build/webpack.config.js --hot --devtool source-map"
+    "dev": "webpack-dev-server --mode development --env.development --inline --config build/webpack.config.js --hot --devtool source-map"
   },
   "author": "fungquanChan",
   "license": "ISC",
   "dependencies": {
-    "css-loader": "^0.28.11",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.12.1",
-    "webpack-cli": "^3.0.8",
-    "webpack-dev-server": "^3.1.4"
+    "axios": "^0.18.0",
+    "vue": "^2.5.16",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
-    "extract-text-webpack-plugin": "^4.0.0-beta.0"
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "style-loader": "^0.21.0",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.12.2",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
   }
 }
