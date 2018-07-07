@@ -11,14 +11,21 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "less": "^3.0.4",
+    "mint-ui": "^2.2.13",
     "vue": "^2.5.16",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
     "css-loader": "^0.28.11",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^1.1.11",
+    "less-loader": "^4.1.0",
     "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
     "vue-loader": "^15.2.4",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^4.12.2",

@@ -1,21 +1,21 @@
 <template>
     <div>
-        
+        商品详情页
     </div>
 </template>
 
 <script>
 export default {
     data(){
-        return {
-            message:'home页面'
+        return{
+
         }
     }
 }
 </script>
 
-<style lang='less' scoped>
-    
+<style lang="less" scoped>
+
 </style>
 
 

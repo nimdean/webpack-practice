@@ -9,17 +9,39 @@ module.exports = (env = {}, argv) => {
         output: {
             filename: 'bundle.js',
             path: path.resolve(__dirname, '../dist'),
+            // publicPath:__dirname
         },
         module: {
-            rules: [
-                {
+            rules: [{
+                test: /\.js$/,
+                loader: 'babel-loader',
+                exclude: /node_modules/
+            }, {
                 test: /\.css$/,
-                use: isDevelopment ? ['style-loader', 'css-loader?minimize'] : ExtractTextPlugin.extract({ use: ['css-loader'] })
+                use: isDevelopment ? ['style-loader', 'css-loader?minimize'] : ExtractTextPlugin.extract({
+                    use: ['css-loader']
+                })
             },{
+                test:/\.less$/,
+                use:['style-loader','css-loader','less-loader']
+            }, {
                 test: /\.vue$/,
                 loader: 'vue-loader'
-            }
-        ]
+            }, {
+                test: /\.jpeg|bmp|jpg|png|tiff|gif$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: '1024' // 此处大小为字节大小，1kb为1024
+                    }
+                }, ]
+            }, {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]?[hash]'
+                }
+            }]
         },
         plugins: isDevelopment ? [new VueLoaderPlugin()] : [
             new ExtractTextPlugin({
@@ -27,10 +49,10 @@ module.exports = (env = {}, argv) => {
             }),
             new VueLoaderPlugin()
         ],
-        devServer:{
-            port:3000,
-            open:true,
-            compress:true
+        devServer: {
+            port: 3000,
+            open: true,
+            compress: true
         }
     }
 }
